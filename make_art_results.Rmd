@@ -1,0 +1,46 @@
+---
+title: "make_art_results"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Setting up the function:
+
+```{r include=FALSE}
+library(devtools)
+source_url("https://raw.githubusercontent.com/akizada/Assignment3.2_R/main/my_function_make_art.R")
+```
+
+Now, let's make some art!
+
+Default settings:
+
+```{r}
+make_art()
+```
+
+
+Less stripes, different colours:
+
+```{r}
+make_art(1, 150)
+```
+
+
+Black and white:
+
+```{r}
+make_art(12345, 600)
+```
+
+
+Colours can also be set manually!
+
+```{r}
+make_art(stripes = 1000, 
+         colour1 = "skyblue", 
+         colour2 = "seagreen") 
+```
